@@ -1,8 +1,9 @@
 # Onceover::CodeQuality
 
-This is the Code Quality plugin for [Onceover](https://github.com/dylanratcliffe/onceover), _The gateway drug to automated infrastructure testing with Puppet_
+This is the Code Quality plugin for [Onceover](https://github.com/voxpupuli/onceover), _The gateway drug to automated infrastructure testing with Puppet_
 
 ## What does it do?
+
 The plugin checks your control repository for:
 
 * Linting
@@ -17,7 +18,7 @@ For sure you can hack around with rake/make and hack something up each time but 
 Install the `onceover-codequality` gem by adding it to your `Gemfile` or by running the following command:
 
 ```shell
-$ gem install onceover-codequality
+gem install onceover-codequality
 ```
 
 ## Usage
@@ -26,46 +27,46 @@ Installing the codequality gem creates a new item within onceover's `run` comman
 
 The command will return `1` to the system if any tests fail, otherwise `0`, which makes it perfect to include in build pipelines.
 
-
-**Check all code in the control repository for Lint and Syntax errors**
-
-```shell
-$ onceover run codequality
-```
-
-**Skip Lint check**
+### Check all code in the control repository for Lint and Syntax errors
 
 ```shell
-$onceover run codequality --no_lint
+onceover run codequality
 ```
 
-**Skip Puppet syntax check**
+### Skip Lint check
 
 ```shell
-$ onceover run codequality --no_syntax
+onceover run codequality --no_lint
 ```
 
-**Skip Puppetfile syntax check**
+### Skip Puppet syntax check
 
 ```shell
-$ onceover run codequality --no_puppetfile
+onceover run codequality --no_syntax
 ```
 
-**Skip documentation generation**
+### Skip Puppetfile syntax check
 
 ```shell
-$ onceover run codequality --no_docs
+onceover run codequality --no_puppetfile
 ```
 
-**Use custom lint settings**
+### Skip documentation generation
+
+```shell
+onceover run codequality --no_docs
+```
+
+### Use custom lint setting
+
 Create a file `puppet-lint.rc` in the directory you run `onceover codequality`
 from and it will be automatically used by Puppet Lint. If missing, the built-in
-defaults from `lib/onceover/codequality/lint.rb` will be used. 
+defaults from `lib/onceover/codequality/lint.rb` will be used.
 
 
 ## Sample output
 
-**All clear**
+### All clear
 
 ```shell
 $ onceover run codequality
@@ -79,7 +80,7 @@ INFO   -> Checking syntax...
 INFO   -> Code Quality tests passed, have a nice day
 ```
 
-**Lint and syntax errors**
+### Lint and syntax errors
 
 ```shell
 $ onceover run codequality
@@ -105,7 +106,7 @@ $ echo $?
 
 I get these errors when I run `onceover run codequality` but everything seems to work, what gives?:
 
-```
+```shell
 WARN: Unresolved specs during Gem::Specification.reset:
       rake (>= 0)
       hiera (< 4, >= 2.0)
@@ -117,14 +118,14 @@ Please report a bug if this causes problems.
 Beats me - something to do with rubygems.  The best way to beat this message is to use [bundler](https://github.com/bundler/bundler) which basically you should already be doing anyway (for your own sanity):
 
 ```shell
-$ bundle exec onceover run codequality
+bundle exec onceover run codequality
 ```
 
 **What are you using under-the-hood?**
 
 * [puppet-lint](https://github.com/rodjek/puppet-lint)
 * [puppet-syntax](https://github.com/voxpupuli/puppet-syntax)
-* [puppet-strings](https://github.com/puppetlabs/puppet-strings/) 
+* [puppet-strings](https://github.com/puppetlabs/puppet-strings/)
 * [r10k](https://github.com/puppetlabs/r10k/)
 
 ## Development
@@ -139,19 +140,11 @@ Have a look at [helloworld plugin](https://github.com/declarativesystems/onceove
 bundle exec rake spec
 ```
 
-### How to build gem
-
-```shell
-gem build onceover-codequality.gemspec
-```
-
-### How to upload to rubygems.org
-
-```shell
-gem push XXX.gem
-```
-
 ## Contributing
 
-* [This project is looking for a maintainer](https://github.com/declarativesystems/onceover-codequality/issues/21)
 * Bug reports and pull requests welcome
+
+## Transfer Notice
+
+This project was originally authored by dylanratcliffe. The maintainer preferred that Vox Pupuli take ownership of the project for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here instead of voxpupuli/onceover-codequality.

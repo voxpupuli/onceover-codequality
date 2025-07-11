@@ -1,16 +1,16 @@
-/.bundle/
+.bundle/
+.idea/
+.rspec_status
+.vendor/
+*.gem
 **/.yardoc
 **/REFERENCE.md
-/spec/testcase/**/doc
 /_yardoc/
 /coverage/
 /doc/
 /pkg/
 /spec/reports/
+/spec/testcase/**/doc
 /tmp/
-
-# rspec failure tracking
-.rspec_status
-/.idea
-*.gem
-
+Gemfile.lock
+vendor/
