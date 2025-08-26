@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'onceover', '~> 5.0'
   spec.add_runtime_dependency 'openvox-strings', '>= 5.0', '< 7.0'
   spec.add_runtime_dependency 'puppet-lint', '~> 4.3'
-  spec.add_runtime_dependency 'puppet-syntax', '~> 6.0'
+  spec.add_runtime_dependency 'puppet-syntax', '>= 6', '< 8'
 end
