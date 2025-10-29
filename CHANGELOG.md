@@ -1,5 +1,19 @@
 # Changelog
 
+## [v1.1.0](https://github.com/voxpupuli/onceover-codequality/tree/v1.1.0) (2025-10-29)
+
+[Full Changelog](https://github.com/voxpupuli/onceover-codequality/compare/v1.0.0...v1.1.0)
+
+**Implemented enhancements:**
+
+- puppet-syntax: Require 7.x [\#49](https://github.com/voxpupuli/onceover-codequality/pull/49) ([bastelfreak](https://github.com/bastelfreak))
+- puppet-lint: Require 5.1 [\#48](https://github.com/voxpupuli/onceover-codequality/pull/48) ([bastelfreak](https://github.com/bastelfreak))
+- Switch to openvox-strings [\#43](https://github.com/voxpupuli/onceover-codequality/pull/43) ([smortex](https://github.com/smortex))
+
+**Merged pull requests:**
+
+- Generate CI matrix dynamically [\#50](https://github.com/voxpupuli/onceover-codequality/pull/50) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v1.0.0](https://github.com/voxpupuli/onceover-codequality/tree/v1.0.0) (2025-07-11)
 
 [Full Changelog](https://github.com/voxpupuli/onceover-codequality/compare/v0.12.0...v1.0.0)
