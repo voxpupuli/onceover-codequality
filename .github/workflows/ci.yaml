@@ -16,7 +16,7 @@ jobs:
     outputs:
       ruby: ${{ steps.ruby.outputs.versions }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Install Ruby 3.4
         uses: ruby/setup-ruby@v1
         with:
@@ -39,7 +39,7 @@ jobs:
           - ubuntu-24.04
           - ubuntu-24.04-arm
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
         with:
